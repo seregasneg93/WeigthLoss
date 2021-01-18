@@ -1,0 +1,128 @@
+﻿<Window x:Class="WeigthLoss.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeigthLoss"
+        mc:Ignorable="d"
+        Title="Программа похудения" Height="509" Width="822" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#FFA89C9C" ResizeMode="NoResize" Icon="/Source/Bo-Southpark-Weight-Gain-4000.ico">
+    <Window.BorderBrush>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FFF10707" Offset="44"/>
+        </LinearGradientBrush>
+    </Window.BorderBrush>
+    <Grid x:Name="Grid1" RenderTransformOrigin="0.516,0.499">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF22E1FF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="900"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid x:Name="ToolBar" Grid.Row="0" MouseDown="ToolBar_MouseDown">
+            <Polygon Opacity="0.2"
+                 Points="0,0,
+                        0,52,
+                        822,52,
+                        822,0">
+                <Polygon.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF46FF00" Offset="1"/>
+                    </LinearGradientBrush>
+                </Polygon.Fill>
+            </Polygon>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+
+            </StackPanel>
+
+            <Image HorizontalAlignment="Left" Height="33" Margin="10,7,0,0"
+                   VerticalAlignment="Top" Width="36" 
+                   Source="/Source/Bo-Southpark-Weight-Gain-4000.ico" Stretch="Fill">
+            </Image>
+            <Image x:Name="ImgClose" HorizontalAlignment="Left" Height="22" Margin="791,2,0,0" VerticalAlignment="Top" 
+                   Width="21" Source="/Source/Закрыть активна.png" Stretch="Uniform" 
+                   RenderTransformOrigin="-0.231,1.687" Cursor="Hand" MouseDown="ImgClose_MouseDown"/>
+            <Image x:Name="ImgMin"  Margin="762,0,35,26" Source="/Source/стрелка неавтивна.png" 
+                   Stretch="Uniform" RenderTransformOrigin="0.169,0.592" Cursor="Hand" MouseDown="MinButton_MouseDown">
+            </Image>
+
+            <TextBlock Text="Программа похудения" Foreground="#FFF7ED12" Grid.Row="0" FontSize="16"
+                       Margin="51,14,585,10"/>
+        </Grid>
+        <Grid x:Name="Main" Margin="0,5,0,436" Grid.Row="1">
+            <TextBlock HorizontalAlignment="Left" Margin="125,75,0,0" 
+                       Text="Имя :" TextWrapping="Wrap" VerticalAlignment="Top" 
+                       Foreground="#FFF7ED12" FontSize="18"/>
+            <TextBlock HorizontalAlignment="Left" Margin="125,124,0,0" 
+                Text="Фамилия :" TextWrapping="Wrap" VerticalAlignment="Top" 
+                Foreground="#FFF7ED12" FontSize="18"/>
+            <TextBlock HorizontalAlignment="Left" Margin="125,177,0,0" 
+                Text="Возраст :" TextWrapping="Wrap" VerticalAlignment="Top" 
+                Foreground="#FFF7ED12" FontSize="18"/>
+            <TextBlock HorizontalAlignment="Left" Margin="125,221,0,0" 
+                Text="Рост :" TextWrapping="Wrap" VerticalAlignment="Top" 
+                Foreground="#FFF7ED12" FontSize="18" RenderTransformOrigin="0.482,0.655"/>
+            <TextBlock HorizontalAlignment="Left" Margin="125,270,0,0" 
+                Text="Вес :" TextWrapping="Wrap" VerticalAlignment="Top" 
+                Foreground="#FFF7ED12" FontSize="18"/>
+            <TextBox x:Name="tbName" HorizontalAlignment="Left" Margin="259,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" FontSize="17" Foreground="Black"/>
+            <TextBox x:Name="tbFname" HorizontalAlignment="Left" Margin="259,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" FontSize="17" Foreground="Black"/>
+            <TextBox x:Name="tbAge" HorizontalAlignment="Left" Margin="259,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" FontSize="17" Foreground="Black"/>
+            <TextBox x:Name="txWeigth" HorizontalAlignment="Left" Margin="259,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" FontSize="17" Foreground="Black"/>
+            <TextBox x:Name="tbHeigth" HorizontalAlignment="Left" Margin="259,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" FontSize="17" Foreground="Black"/>
+            <TextBlock HorizontalAlignment="Left" Margin="125,10,0,0" 
+                Text="Ввидети свои данные :" TextWrapping="Wrap" VerticalAlignment="Top" 
+                Foreground="#FFF7ED12" FontSize="18"/>
+            <Button x:Name="btnAdd" HorizontalAlignment="Left" Margin="259,322,0,0" VerticalAlignment="Top" Height="36" Width="53" Background="#FF226F7C" Click="btnAdd_Click">
+                <StackPanel>
+                    <Image Source="/Source/icons8-ок-144.png" Height="30" Width="48"/>
+                    <Button Content="Button"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnCancel" HorizontalAlignment="Left" Margin="332,322,0,0" VerticalAlignment="Top" Height="36" Width="53" Background="#FF226F7C">
+                <StackPanel>
+                    <Image Source="/Source/icons8-отмена-32.png" Height="30" Width="48" MouseDown="Image_MouseDown_2"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnRefresh" HorizontalAlignment="Left" Margin="420,318,0,0" VerticalAlignment="Top" Height="40" Width="38" Background="#FF226F7C" Click="Button_Click">
+                <StackPanel>
+                    <Image Source="/Source/Обновить.png" Height="34" Width="30" RenderTransformOrigin="0.48,0.579" MouseDown="Image_MouseDown_1"/>
+                </StackPanel>
+            </Button>
+            <TextBlock x:Name="lblRezult" HorizontalAlignment="Left" Margin="487,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+                Foreground="#FFF7ED12" FontSize="18" Width="313"/>
+            <Image HorizontalAlignment="Left" Height="51" Margin="10,10,0,0" VerticalAlignment="Top" Width="46" Source="/Source/Menu.png" Cursor="Hand" MouseDown="Image_MouseDown"/>
+
+            <Grid x:Name="InfoGrid" Height="390" Width="702" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Hidden"
+                  Margin="0,58,0,0">
+                <Polygon StrokeThickness="2" Stroke="AliceBlue"
+                         Points="0,390,
+                                700,390,
+                                700,0,
+                                0,0" Fill="#FF3AEA28"/>
+                <Polygon StrokeThickness="1"
+                         Points="0,390,
+                                700,390,
+                                700,0,
+                                0,0">
+                    <Polygon.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#FF234955" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Polygon.Fill>
+                </Polygon>
+                <ListView x:Name="lbSpisok" Margin="10,74,10,10" Background="#FFBDB1B1">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto"/>
+                </ListView>
+                <Label Content="Списки участников." HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Foreground="#FFF9F034" FontSize="16"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

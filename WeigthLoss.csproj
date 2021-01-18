@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Bo-Southpark-Weight-Gain-4000.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Source\Bo-Southpark-Weight-Gain-4000.ico" />
+    <None Remove="Source\icons8-ок-144.png" />
+    <None Remove="Source\icons8-отмена-32.png" />
+    <None Remove="Source\Menu.png" />
+    <None Remove="Source\Закрыть активна.png" />
+    <None Remove="Source\Обновить.png" />
+    <None Remove="Source\стрелка неавтивна.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Source\Bo-Southpark-Weight-Gain-4000.ico" />
+    <Resource Include="Source\icons8-ок-144.png" />
+    <Resource Include="Source\icons8-отмена-32.png" />
+    <Resource Include="Source\Menu.png" />
+    <Resource Include="Source\Закрыть активна.png" />
+    <Resource Include="Source\Обновить.png" />
+    <Resource Include="Source\стрелка неавтивна.png" />
+  </ItemGroup>
+
+</Project>
