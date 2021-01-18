@@ -37,7 +37,7 @@ namespace WeigthLoss.Models
             }
             else if (isFat)
             {
-                 st1 = "У вас лишний вес!";
+                 st1 = "У вас лишний вес!!!";
             }
             else
             {
