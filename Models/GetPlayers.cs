@@ -26,7 +26,7 @@ namespace WeigthLoss.Models
                 }
                 else
                 {
-                    MessageBox.Show("Список пуст!!!", "Error", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Список пуст!", "Error", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (ArgumentException)

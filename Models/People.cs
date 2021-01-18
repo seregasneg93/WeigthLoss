@@ -25,7 +25,7 @@ namespace WeigthLoss.Models
             string st1;
             if (isToLoow)
             {
-                st1 = "Вы истощены!:(";
+                st1 = "Вы истощены!";
             }
             else if (isNormal)
             {
