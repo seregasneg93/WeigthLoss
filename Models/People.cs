@@ -15,7 +15,7 @@ namespace WeigthLoss.Models
         public int Height { get; set; }
 
         public string MName { get; set; }
-        public int Cars { get; set; }
+        public int CarsNN { get; set; }
 
         public string IMT(double Weigth, double Heigth,string[] str)
         {
