@@ -14,6 +14,8 @@ namespace WeigthLoss.Models
         public int Weigth { get; set; }
         public int Height { get; set; }
 
+        public string MName { get; set; }
+
         public string IMT(double Weigth, double Heigth,string[] str)
         {
             double IMT = Weigth / (Heigth * Heigth);
